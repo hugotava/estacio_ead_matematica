@@ -25,3 +25,41 @@
     - Esse tipo de situação nos remete ao terceiro agrupamento básico, utilizado em contagem, e que chamamos de combinação de n objetos tomados p a p, ou n escolhe p, em que não importa a ordem dos objetos, mas apenas o subconjunto formado por eles. Então, no caso geral, devemos dividir o número de filas por p! para contarmos uma única vez cada uma das p! filas que compõem o mesmo conjunto.
     - Eis a solução com Combinação: $C^7_3 = \frac{A^7_3}{3!} = \frac{7!}{(7-3)! \times 3!} = \frac{7!}{4! \times 3!} = \frac{7 \times 6 \times 5 \times 4!}{4! \times 3!} = \frac{7 \times 6 \times 5}{ 3 \times 2 \times 1} = \frac{7 \times 6 \times 5}{6} = 7 \times 5 = 35$
 ---
+
+
+
+Para determinar quantos subconjuntos de 3 elementos podemos construir a partir de um conjunto com 7 elementos, usamos a fórmula das combinações. A combinação de \( n \) elementos tomados \( k \) de cada vez é dada por:
+
+$C(n, k) = \frac{n!}{k!(n-k)!}$
+
+No caso, temos $n = 7$ e $k = 3$. Substituindo esses valores na fórmula, temos:
+
+$C(7, 3) = \frac{7!}{3!(7-3)!} = \frac{7!}{3!4!}$
+
+Podemos escrever $7!$ e $4!$ de forma que possamos cancelar os fatores comuns:
+
+$7! = 7 \times 6 \times 5 \times 4!$
+
+Então, a fórmula se torna:
+
+$C(7, 3) = \frac{7 \times 6 \times 5 \times 4!}{3! \times 4!}$
+
+Os $4!$ no numerador e no denominador se cancelam:
+
+$C(7, 3) = \frac{7 \times 6 \times 5}{3!}$
+
+Agora, calculamos $3!$:
+
+$3! = 3 \times 2 \times 1 = 6$
+
+Então, a expressão fica:
+
+$C(7, 3) = \frac{7 \times 6 \times 5}{6}$
+
+Podemos simplificar $6$ no numerador e no denominador:
+
+$C(7, 3) = 7 \times 5 = 35$
+
+Portanto, o número de subconjuntos de 3 elementos que podemos formar a partir de um conjunto com 7 elementos é:
+
+$\boxed{35}$
