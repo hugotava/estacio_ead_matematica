@@ -3,9 +3,11 @@
 ## Princípios de contagem
 ### Agrupamentos combinatórios
 ---
-  ### Arranjo: $A^n_p = \frac{n!}{(n-p)!}$
+  ### Arranjo (sem repetição): $A^n_p = \frac{n!}{(n-p)!}$
   * Exemplo: De quantas maneiras podemos fazer filas com 5 alunos, se dispomos de 12 alunos?
   * Solução: $\frac{12!}{(12-5)!} = \frac{12!}{7!} = \frac{12 \times 11 \times 10 \times 9 \times 8 \times 7!}{7!} = 12 \times 11 \times 10 \times 9 \times 8 =  95040$
+---
+  ### Arranjo (com repetição): $AR^n_p = n^p$
 ---
   ### Permutação: $P_n = n!$
   * Exemplo:
