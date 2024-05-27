@@ -2,6 +2,11 @@
 
 ## Princípios de contagem
 ### Agrupamentos combinatórios
+<div align="center">
+  <h2>A ORDEM É RELEVANTE:</h2>
+  <p>Filas, Senhas, Anagramas...</p>
+</div>
+
 ---
   ### Arranjo (sem repetição): $A^n_p = \frac{n!}{(n-p)!}$
   * Exemplo: De quantas maneiras podemos fazer filas com 5 alunos, se dispomos de 12 alunos?
@@ -17,7 +22,18 @@
   * Solução PUBLICAR:
     $P_8 = 8!  = 8 \times 7 \times 6 \times 5! = 8 \times 7 \times 6 \times 120 = 40320$
 ---
-  ### Combinação: $C^n_p = \frac{A^n_p}{p!} = \frac{n!}{(n-p)! \times p!}$
+### Permutação (com repetição): $PR^n_p,q,r,...t = \frac{n!}{p! \times q! \times ... \times t!}$
+* Precisamos dividir n! pelas repetições, que são p!, r!, s!, ..., t!
+---
+  ### Permutação Circular: $PC_n = (n - 1)!$
+---
+<div align="center">
+  <h2>A ORDEM NÃO É RELEVANTE:</h2>
+  <p>Comissões, Subconjuntos...</p>
+</div>
+
+
+  ### Combinação (sem repetição): $C^n_p = \frac{A^n_p}{p!} = \frac{n!}{(n-p)!  \times  p!}$
   * Exemplo: Determine quantos subconjuntos de 3 elementos podemos construir a partir de um conjunto com 7 elementos.
   * Solução:
     - Os últimos exemplos abordados tratam, basicamente, de ordenar objetos. Mas há situações em que a ordem dos objetos não é relevante. Esse exemplo é uma dessas situações, pois as notações { a, b, c } e { a, c, b }, { b, c, a },
@@ -27,41 +43,5 @@
     - Esse tipo de situação nos remete ao terceiro agrupamento básico, utilizado em contagem, e que chamamos de combinação de n objetos tomados p a p, ou n escolhe p, em que não importa a ordem dos objetos, mas apenas o subconjunto formado por eles. Então, no caso geral, devemos dividir o número de filas por p! para contarmos uma única vez cada uma das p! filas que compõem o mesmo conjunto.
     - Eis a solução com Combinação: $C^7_3 = \frac{A^7_3}{3!} = \frac{7!}{(7-3)! \times 3!} = \frac{7!}{4! \times 3!} = \frac{7 \times 6 \times 5 \times 4!}{4! \times 3!} = \frac{7 \times 6 \times 5}{ 3 \times 2 \times 1} = \frac{7 \times 6 \times 5}{6} = 7 \times 5 = 35$
 ---
-
-
-
-Para determinar quantos subconjuntos de 3 elementos podemos construir a partir de um conjunto com 7 elementos, usamos a fórmula das combinações. A combinação de \( n \) elementos tomados \( k \) de cada vez é dada por:
-
-$C(n, k) = \frac{n!}{k!(n-k)!}$
-
-No caso, temos $n = 7$ e $k = 3$. Substituindo esses valores na fórmula, temos:
-
-$C(7, 3) = \frac{7!}{3!(7-3)!} = \frac{7!}{3!4!}$
-
-Podemos escrever $7!$ e $4!$ de forma que possamos cancelar os fatores comuns:
-
-$7! = 7 \times 6 \times 5 \times 4!$
-
-Então, a fórmula se torna:
-
-$C(7, 3) = \frac{7 \times 6 \times 5 \times 4!}{3! \times 4!}$
-
-Os $4!$ no numerador e no denominador se cancelam:
-
-$C(7, 3) = \frac{7 \times 6 \times 5}{3!}$
-
-Agora, calculamos $3!$:
-
-$3! = 3 \times 2 \times 1 = 6$
-
-Então, a expressão fica:
-
-$C(7, 3) = \frac{7 \times 6 \times 5}{6}$
-
-Podemos simplificar $6$ no numerador e no denominador:
-
-$C(7, 3) = 7 \times 5 = 35$
-
-Portanto, o número de subconjuntos de 3 elementos que podemos formar a partir de um conjunto com 7 elementos é:
-
-$\boxed{35}$
+### Combinação (com repetição): $CR^n_p = PR^{n+p-1}_{p,n-1}$
+  * $CR^n_p = C^{n+p-1}_{n-1}$
